@@ -1,0 +1,12 @@
+{
+  "name": "plants1",
+  "version": "1.0.0",
+  "description": "<p>https://EvgenKlo.github.io/rsschool-cv/cv</p>\r <p>https://EvgenKlo.github.io/rsschool-cv/</p>\r <p>https://rolling-scopes-school.github.io/evgenklo-JSFEPRESCHOOL2022Q4/plants1/</p>",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch sass/style.scss sass/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
