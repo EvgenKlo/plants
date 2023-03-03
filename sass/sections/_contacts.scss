@@ -1,0 +1,315 @@
+.section-contacts {
+    display: flex;
+    width: 100%;
+    min-height: 550px;
+    background: #EDF2EC;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    @include media-tablet {
+        &.active {
+            min-height: 741px;
+        }
+    }
+    @include media-mobile {
+        min-height: 445px;
+        &.active {
+            min-height: 445px;
+        }
+    }
+}
+
+.woman-contacts {
+    display: flex;
+    height: 550px;
+    align-items: flex-end;
+    @include media-tablet {
+        width: 200px;
+        height: 249px;
+        margin-left: 20px;
+        >* {
+            width: 200px;
+            height: 249px;
+        }
+    }
+    @include media-mobile {
+        width: 100px;
+        height: 124px;
+        margin-left: 20px;
+        margin-left: -4px;
+        >* {
+            width: 100px;
+            height: 124px;
+        }
+        &.active {
+            display: none;
+        }
+    }
+}
+
+.contacts-right {
+    display: flex;
+    flex-wrap: wrap;
+/*     @include media-tablet {
+        flex-direction: column;
+    } */
+    @include media-mobile {
+        flex-direction: column;
+    }
+}
+
+.h2-contact-us {
+    display: flex;
+    padding-top: 60px;
+    width: 303px;
+    justify-content: flex-end;
+    @include media-tablet {
+        padding-top: 40px;
+        width: 100%;
+        justify-content: center;
+    }
+    @include media-mobile {
+        padding-top: 25px;
+        height: 30px;
+    }
+}
+
+.no-margin-contact {
+    margin: 0;
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 5.2rem;
+    color: #499A18;
+    @include media-mobile {
+        font-size: 2.5rem;
+        line-height: 3.3rem;
+    }
+}
+
+.accordion-btn {
+    display: flex;
+    width: 450px;
+    margin-left: 64px;
+    margin-top: 148px;
+    flex-direction: column;
+    position: relative;
+    @include media-tablet {
+        margin: 0 auto;
+        padding: 100px 0 249px;
+        &.active {
+            padding: 59px 0 12px;
+        }
+    }
+    @media (max-width: 470px) {
+        width: 350px;
+    }
+    @include media-mobile {
+        width: 300px;
+        padding: 84px 0 85px;
+        align-items: center;
+        &.active {
+            padding: 45px 0 12px;
+        }
+    }
+}
+
+.select-accord-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background: #D6E7D2;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 32px);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 4rem;
+    letter-spacing: 0.05em;
+    color: #717171;
+    transition: all 0.15s;
+    &:hover {
+        cursor: pointer;
+    }
+    &.active {
+        background: #C1E698;
+        border: 1px solid #D6E7D2;
+        box-shadow: none
+    }
+    @include media-mobile {
+        background-position: calc(100% - 22px);
+    }
+}
+
+.select-circle-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    background: #AEA1A1;
+    border-radius: 50%;
+    margin-right: 32px;
+    transition: all 0.2s;
+    &.active {
+        background: #8BA07E;
+        transform: rotate(-180deg);
+    }
+    @include media-mobile {
+        margin-right: 22px;
+    }
+}
+
+.select-arrow-circle-buttons {
+    width: 3px;
+    height: 3px;
+    border-top: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
+    transform: rotate(135deg);
+    margin-bottom: 1.5px;
+}
+
+.p-select {
+    margin: 0 0 0 22px;
+    @include media-mobile {
+        margin: 0 0 0 18px;
+    }
+}
+
+.select {
+    display: block;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: #DCE9D9;
+    border: 0 solid #DCE9D9;
+    height: 0;
+    transition: all 0s;
+    overflow: hidden;
+    &.active {
+        height: 192px;
+        padding-top: 15px;
+        padding-bottom: 31px;
+        border: 1px solid #DCE9D9;
+        transition: all 0.3s;
+    }
+}
+
+.select-option {
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px solid #D9D9D9;
+    width: 84.5%;
+    height: 47px;
+    margin-left: 20px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 4rem;
+    letter-spacing: 0.05em;
+    color: #499A18;
+    cursor: pointer;
+    transition: all 0.15s linear;
+    &:hover {
+        color: #717171;
+        border-bottom: 1px solid #717171;
+    }
+}
+
+.city-card {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 448px;
+    height: 214px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    background: #EDF2EC;
+    display: none;
+    top: 96px;
+    &.active {
+        display: flex;
+    }
+    @include media-tablet {
+        margin-top: 60px;
+        position: static;
+    }
+    @include media-mobile {
+        width: 280px;
+        height: 212px;
+        margin-top: 47px;
+    }
+}
+
+.table-city-card {
+    margin: 17px 80px 20px 0;
+    @include media-mobile {
+        margin: 0;
+        width: 220px;
+        margin-top: 23px;
+        margin-bottom: 17px;
+    }
+}
+
+.city-card-key {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    letter-spacing: 0.05em;
+    color: #000000;
+    height: 35px;
+    padding-right: 10px;
+    @include media-mobile {
+        width: 65px;
+        padding-right: 0;
+    }
+}
+
+.city-card-contant {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    letter-spacing: 0.05em;
+    color: #717171;
+    height: 35px;
+}
+
+.str-table-city-card {
+    height: 35px;
+}
+
+.city-card-botton {
+    width: 122px;
+    height: 26px;
+    border: 1px solid #E06733;
+    border-radius: 5px;
+    background: #EDF2EC;
+    font-family: 'Inika', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    text-align: center;
+    color: #717171;
+    &:hover {
+        background: #E06733;
+        color: #FFFFFF;
+        transition: all 0.15s linear;
+        cursor: pointer;
+    }
+}
+
+.no-style {
+    display: block;
+    text-decoration: none;
+    color: #717171;
+}

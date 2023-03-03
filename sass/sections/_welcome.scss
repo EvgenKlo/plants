@@ -1,0 +1,115 @@
+.section-welcome {
+    display: flex;
+    background: #EDF2EC;
+    width: 100%;
+    min-height: 532px;    
+    align-items: center;
+    justify-content: space-around;
+    @include media-tablet {
+        flex-direction: row-reverse;
+        min-height: 420px;
+        align-items: flex-start;
+    }
+
+    @include media-mobile {
+        min-height: 300px;
+    }
+    @media (max-width: 600px) {
+        flex-wrap: wrap;
+    }
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    width: 549px;
+    min-height: 340px;
+    justify-content: space-between;
+    @include media-tablet {
+        margin-left: 50px;
+        min-height: 310px;
+        margin-top: 40px;
+    }
+    @include media-mobile {
+        width: 330px;
+        min-height: 252px;
+        margin: 24px 0;
+    }
+}
+
+h1 {
+    margin: 0;
+    font-size: 4.5rem;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 5rem;
+    color: #717171;
+    @include media-tablet {
+        font-size: 3.5rem;
+    }
+    @include media-mobile {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+    }
+}
+
+.colortext-plants {
+    color: #499A18;
+}
+
+.welcome-content {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3.5rem;
+    color: #636060;
+    @include media-tablet {
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+        padding-left: 5px;
+    }
+    @include media-mobile {
+        padding-left: 0;
+    }
+}
+
+.leafs {
+    @include media-tablet {
+        margin: 40px 50px 0 47px;
+        >* {
+            width: 280px;
+            height: 254px;
+        }
+        @include media-mobile {
+            display: none;
+        }
+    }
+}
+
+.learn-more {
+    width: 158px;
+    height: 44px;
+    border: 2px solid #E06733;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000000;
+    background: #EDF2EC;
+    transition: 0.1s linear;
+    @include media-mobile {
+        width: 100px;
+        height: 34px;
+        font-size: 1rem;
+    }
+}
+
+.learn-more:hover {
+    background: #E06733;
+    color: #FFFFFF;
+    cursor: pointer;
+}
